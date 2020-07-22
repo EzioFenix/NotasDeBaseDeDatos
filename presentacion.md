@@ -324,5 +324,171 @@ Esta es la representación de un DBMS , ya que las entradas y salidas de una bas
 
 ---
 
+![width:600](img/Screenshot_39.png)
+
+---
+
 #  C2
+
+[video](https://www.youtube.com/watch?v=fwsbCl1EFtM&list=PLDfNoDGK4AHpkZihIhXcxrW056JyajVuW&index=2)
+
+---
+
+# Diseño Conceptual
+
+![width:600](img/Screenshot_40.png)
+
+---
+
+
+![width:600](img/Screenshot_41.png)
+
+- Perspectiva $\rightarrow$ Para que se quieren usar
+- Naturaleza $\rightarrow$  Entero, decimal , cadena
+- Uso $\rightarrow$ cual es el objetivo de registrar el dato
+
+---
+
+## Pasos para diseñar conceptualmente
+
+![width:600](img/Screenshot_42.png)
+
+
+---
+
+### 1 Indentificar las entidades
+
+![width:600](img/Screenshot_43.png)
+
+---
+
+### Paso 2 Identificar las relaciones
+
+![width:500](img/Screenshot_43.png)
+
+El profesor **imparte clases** a los alumnos
+El cliente **compra** productos
+
+Ninguna entidad puede quedar aislada.
+
+Lo que esta **subrayado** es la relación entre entidades.
+
+---
+
+### Paso 3 Identificar atributos y asociarlos a entidades y relaciones
+
+![width:600](img/Screenshot_44.png)
+
+Atributos=propiedades
+
+---
+
+La entidad hombre tiene propiedades
+
+- nombre
+- edad
+- estatura
+
+Hay ocasiones en que un atributo puede llegar a convertirse en otra entidad, si necesitas ser más espcificos en campos que se repite.
+
+> Si por ejemplo registraras muchas veces productos de una cierta marca y estas narcas tuvieran codigigos, sub categorias de productos , tendrías que posiblemente crear otra entidad, esto se define de acuedo al cliente y las reglas de negocio.
+
+
+---
+
+### Paso 4 Determinar los dominos de los atributos
+
+![width:600](img/Screenshot_45.png)
+
+Se refiera a los posibles valores que puede tomar el atributo.
+**E.g** si es la edad, pues posiblemente, tenga que tener más de 18 para registrase.
+
+Tambien se llama ambito.
+
+---
+
+### P 5 Determinarlos identificadores
+
+![width:600](img/Screenshot_46.png)
+
+Todo elemento tiene que tener un identificador único, para que no se confunda con otro.
+
+
+**E.g**  Un humano tiene una Curp, si dijeras el nombre, no podría ser por que puede haber 2 personas llamadas igual, pero si dices que posiblemente 2 personas de diferentes paises tiene la misma curp.
+En la escala global hay otra manera de identificación que sea un numero de la nacionalidad + tu curp y otras cosas que hacen que no sean iguales .
+
+---
+**E.g** Tú matricula como alumno puede ser un identificador.
+
+#### Tipos 
+Simples 
+Compuestas: Formadas por más de un atributo **E.g.** `nombre + cuenta_id`
+
+#### Excepciones
+
+Hay ocasiones en que la entidad no tenga un **identificador natural** , por ello nosotros tenemos que diseñar uno.
+
+---
+
+**E.g.** 50  cosas de una caja se quieren poner en una base de datos , ninguno tiene un identificador nativo (natural) por ello creamos una enumerador que aumenta cada vez que sacamos una cosa de la caja. 
+
+Sus **id´s** quedarian así
+```
+cosa_01
+cosa_02
+cosa_03
+...
+cosa_50
+```
+
+---
+
+#### Conveciones
+
+**E.g.** Si tú lo llamas **pelota** yo le digo **esfera bota** y otra persona le llama **boloide** pues al ver una base de datos con dichos nombres nos vamos a confundir, por ello te propongo  poner un nombre especifico con el cual los 3 le llamameos a esto le llamamos **convención**.
+
+Las convenciones en los identificadores son `nombreLlave_id` o `nombreLlave_cv` 
+
+**E.g**
+```sql
+rfc_id
+
+matricula_id
+```
+
+---
+
+###
+
+![width:600](img/Screenshot_47.png)
+
+Va de la mano con normalización, donde es el proceso donde la base de datos se va fracmentando.
+
+---
+
+### 
+
+![width:600](img/Screenshot_48.png)
+
+- Power Designer
+
+Sirve para muchos diagramas
+Coversión entre diarramas fisicos y dicates
+fiicos y conceptuales
+conversion entre diagramas fisicos y conceptuales.
+Dagramas de caso de uso
+etc
+
+
+---
+
+### 
+
+![width:600](img/Screenshot_49.png)
+
+En caso de haber detalles pues volver al paso 1 para pulirlo
+o cuando se tienen que agregar mejoras
+- Crecimiento (siempre dejar la posibilidad) 
+  - Comunmente se llaman **varillas** en caso de que se necesiten construir más la varillas se dejan ahi por si las dudas.
+
 
